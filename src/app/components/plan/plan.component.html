@@ -21,7 +21,7 @@
     <!-- Overview -->
     <div class="overview">
         <article nz-typography>
-            <h3 nz-typography>Visão geral</h3>
+            <h2 nz-typography><span nz-icon nzType="bulb" nzTheme="outline"> </span> Visão geral</h2>
             <p nz-typography nzType="secondary">
                 Esta viagem de 2 dias em Caçapava oferece uma excelente mistura de aventuras ao ar livre e passeios em ambiente urbano. Aproveite as trilhas naturais, explore a história automobilística e aproveite a deliciosa culinária local em alguns dos melhores restaurantes da região. O itinerário está balanceado para um casal, aproveitando ao máximo o que a cidade tem a oferecer em termos de aventura e conforto.
             </p>
@@ -31,12 +31,12 @@
     <!-- Itinerary -->
 
     <div class="itinerary" *ngIf="hasActivities">
-        <h2 nz-typography>Itinerário</h2>
+        <h2 nz-typography><span nz-icon nzType="calendar" nzTheme="outline"> </span> Itinerário</h2>
         <nz-collapse nzGhost class="itinerary-collapse" *ngFor="let activity of activities; let i = index">
             <nz-collapse-panel #p [nzActive]="'i == 0'" [nzHeader]="'Dia ' + activity[0].dayCounter"  [style]="customStyle">
                 <div class="cards" *ngFor="let place of activity" >
                     <div class="card">
-                        <h4 nz-typography style="color: var(--ant-primary-color); text-decoration-line: underline;">{{place.location}}</h4>
+                        <h4 nz-typography style="color: var(--ant-primary-color); text-decoration-line: underline;"><span nz-icon nzType="environment" nzTheme="outline"></span> {{place.location}}</h4>
                         <p nz-typography nzType="secondary">{{place.description}}</p>
                         <p>
                             <strong>
