@@ -1,0 +1,31 @@
+// Custom Theming for NG-ZORRO
+// For more information: https://ng.ant.design/docs/customize-theme/en
+
+// 1. Primeiro importamos o tema default para ter acesso a todas variáveis
+@import "../node_modules/ng-zorro-antd/src/style/themes/default.less";
+
+// 2. Aqui podemos customizar as variáveis do tema
+// @primary-color: #1890ff;
+// @success-color: #52c41a;
+// @warning-color: #faad14;
+// @error-color: #f5222d;
+// @border-radius-base: 4px;
+// @font-size-base: 14px;
+// @height-base: 32px;
+
+// Exportar variáveis como CSS
+:root {
+  --ant-primary-color: @primary-color;
+  --primary-color-active: @primary-color-active;
+  --ant-success-color: @success-color;
+  --ant-warning-color: @warning-color;
+  --ant-error-color: @error-color;
+  --normal-color: @normal-color;
+}
+
+// 3. Por último importamos o ng-zorro-antd.less que aplicará nossas customizações
+@import "../node_modules/ng-zorro-antd/ng-zorro-antd.less";
+
+// Variações das cores (opcional)
+@primary-color-light: color(~`colorPalette('@{primary-color}', 5) `);
+@primary-color-dark: color(~`colorPalette('@{primary-color}', 7) `);

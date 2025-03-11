@@ -1,0 +1,47 @@
+.plan {
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.overview {
+    margin-top: 32px;
+    padding: 0 24px;
+}
+
+.itinerary {
+    padding: 0 24px;
+    margin-top: 40px;
+}
+
+.itinerary-collapse {
+    // margin-top: 24px;
+}
+
+
+::ng-deep .itinerary-collapse .ant-collapse-header {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+::ng-deep .ant-card-head-title {
+    color: var(--ant-primary-color) !important;
+}
+
+::ng-deep .ant-card-bordered {
+    border: 1px solid var(--ant-primary-color) !important;
+}
+
+.vertical-line {
+    // position: absolute;
+    // left: 50%;
+    display:    flex;
+    justify-content: center;
+    align-items: center;
+    width: 2px;
+    background-color: #e8e8e8;
+    height: 80px;
+    top: 40px;
+    transform: translateX(-50%);
+    // z-index: -1;
+    margin: 0 auto;
+}

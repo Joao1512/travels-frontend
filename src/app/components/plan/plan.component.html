@@ -1,0 +1,56 @@
+<div class="plan">
+
+<div class="image-container" style="
+    background-image: url('https://lh3.googleusercontent.com/gps-cs-s/AB5caB_q3J6pyksVAlQ9SS9NatjrPS4P_MOMsPd16vDRcCR-JHmmFrj41qouAvniReCtLVEnAag5GBtU5OGHG5y5bhjchu_nK5LaTko2ycpcakdkaCN07hX4-SX3y5Z-9iM-9oock8Y=s677-k-no');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 350px;">
+        <div style="
+            background: linear-gradient(180deg,transparent,rgba(0,0,0,.6) 77.61%,rgba(0,0,0,.6));
+            width: inherit;
+            height: inherit;
+            ">
+        </div>
+        <div class="image-info">
+            <h1 nz-typography class="image-title" style="position: relative; top: -70px; left: 24px; color: white;">3 dias em Caçapava, SP </h1>
+        </div>
+</div>
+    
+
+    <!-- Overview -->
+    <div class="overview">
+        <article nz-typography>
+            <h3 nz-typography>Visão geral</h3>
+            <p nz-typography>
+                Esta viagem de 2 dias em Caçapava oferece uma excelente mistura de aventuras ao ar livre e passeios em ambiente urbano. Aproveite as trilhas naturais, explore a história automobilística e aproveite a deliciosa culinária local em alguns dos melhores restaurantes da região. O itinerário está balanceado para um casal, aproveitando ao máximo o que a cidade tem a oferecer em termos de aventura e conforto.
+            </p>
+        </article>
+    </div>
+
+    <!-- Itinerary -->
+
+    <div class="itinerary" *ngIf="hasActivities">
+        <h2 nz-typography>Itinerário</h2>
+        <nz-collapse nzGhost class="itinerary-collapse" *ngFor="let activity of activities; let i = index">
+            <nz-collapse-panel #p [nzActive]="'i == 0'" [nzHeader]="'Dia ' + activity[0].dayCounter"  [style]="customStyle">
+                <div class="cards" *ngFor="let place of activity" >
+                    <nz-card style="width:100%;" [nzTitle]="place.location">
+                        <p>{{place.description}}</p>
+                        <p>
+                            <strong>
+                                <span nz-icon nzType="compass" nzTheme="outline"> </span> {{place.locationAddress}}
+                            </strong>
+                        </p>
+                        <p>
+                            <strong>
+                                <span nz-icon nzType="clock-circle" nzTheme="outline"> </span> {{place.durationMin + ' minutos'}}
+                            </strong>
+                        </p>
+                    </nz-card>
+                    <div class="vertical-line"></div>
+                </div>
+            </nz-collapse-panel>
+        </nz-collapse>
+    </div>  
+</div>

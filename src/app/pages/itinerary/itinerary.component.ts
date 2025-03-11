@@ -1,14 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { LeafletDirective } from '@asymmetrik/ngx-leaflet';
-import { latLng, map, tileLayer } from 'leaflet';
-
+import { latLng, tileLayer } from 'leaflet';
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-itinerary',
+  templateUrl: './itinerary.component.html',
+  styleUrls: ['./itinerary.component.scss']
 })
-export class AppComponent implements OnInit {
-  title = 'travel-frontend';
+export class ItineraryComponent implements OnInit {
+
   options: any;
 
   ngOnInit(): void {
@@ -20,6 +18,5 @@ export class AppComponent implements OnInit {
       center: latLng(-23.102091, -45.706848)
     };
   }
-
 
 }

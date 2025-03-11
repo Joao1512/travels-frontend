@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
+// Variáveis que mapeiam as cores do ng-zorro
+:root {
+  --primary-color: var(--ant-primary-color);
+  --success-color: var(--ant-success-color);
+  --warning-color: var(--ant-warning-color);
+  --error-color: var(--ant-error-color);
+}
